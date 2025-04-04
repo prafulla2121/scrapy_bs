@@ -1,0 +1,262 @@
+2025-03-22 08:42:35 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: b1)
+2025-03-22 08:42:35 [scrapy.utils.log] INFO: Versions: lxml 5.3.1.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)], pyOpenSSL 25.0.0 (OpenSSL 3.4.1 11 Feb 2025), cryptography 44.0.1, Platform Windows-10-10.0.22631-SP0
+2025-03-22 08:42:52 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: b1)
+2025-03-22 08:42:52 [scrapy.utils.log] INFO: Versions: lxml 5.3.1.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)], pyOpenSSL 25.0.0 (OpenSSL 3.4.1 11 Feb 2025), cryptography 44.0.1, Platform Windows-10-10.0.22631-SP0
+2025-03-22 08:42:52 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-03-22 08:42:53 [scrapy.extensions.telnet] INFO: Telnet Password: dc360c690ce9cbd0
+2025-03-22 08:42:53 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-03-22 08:42:53 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.5,
+ 'BOT_NAME': 'b1',
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'CONCURRENT_REQUESTS_PER_IP': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'LOG_FILE': 'business_scraper.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'b1.spiders',
+ 'SPIDER_MODULES': ['b1.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'}
+2025-03-22 08:42:53 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-03-22 08:42:53 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-03-22 08:42:53 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2025-03-22 08:42:53 [scrapy.core.engine] INFO: Spider opened
+2025-03-22 08:42:53 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-03-22 08:42:53 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2025-03-22 08:42:53 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.business-standard.com/>
+Traceback (most recent call last):
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\twisted\internet\defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\core\downloader\middleware.py", line 57, in process_request
+    method(request=request, spider=spider)
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\downloadermiddlewares\useragent.py", line 36, in process_request
+    request.headers.setdefault(b"User-Agent", self.user_agent)
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\utils\datatypes.py", line 84, in setdefault
+    return dict.setdefault(self, self.normkey(key), self.normvalue(def_val))  # type: ignore[arg-type]
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\http\headers.py", line 59, in normvalue
+    return [self._tobytes(x) for x in _value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\http\headers.py", line 59, in <listcomp>
+    return [self._tobytes(x) for x in _value]
+            ^^^^^^^^^^^^^^^^
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\http\headers.py", line 68, in _tobytes
+    raise TypeError(f"Unsupported value type: {type(x)}")
+TypeError: Unsupported value type: <class 'fake_useragent.fake.FakeUserAgent'>
+2025-03-22 08:42:54 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-03-22 08:42:54 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/builtins.TypeError': 1,
+ 'elapsed_time_seconds': 0.269846,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 3, 22, 3, 12, 54, 104852, tzinfo=datetime.timezone.utc),
+ 'items_per_minute': None,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'responses_per_minute': None,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 3, 22, 3, 12, 53, 835006, tzinfo=datetime.timezone.utc)}
+2025-03-22 08:42:54 [scrapy.core.engine] INFO: Spider closed (finished)
+2025-03-22 08:43:09 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: b1)
+2025-03-22 08:43:09 [scrapy.utils.log] INFO: Versions: lxml 5.3.1.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)], pyOpenSSL 25.0.0 (OpenSSL 3.4.1 11 Feb 2025), cryptography 44.0.1, Platform Windows-10-10.0.22631-SP0
+2025-03-22 08:43:09 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-03-22 08:43:09 [scrapy.extensions.telnet] INFO: Telnet Password: 6ce03f8a0198f96d
+2025-03-22 08:43:09 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-03-22 08:43:09 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.5,
+ 'BOT_NAME': 'b1',
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'CONCURRENT_REQUESTS_PER_IP': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'LOG_FILE': 'business_scraper.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'b1.spiders',
+ 'SPIDER_MODULES': ['b1.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'}
+2025-03-22 08:43:10 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-03-22 08:43:10 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-03-22 08:43:10 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2025-03-22 08:43:10 [scrapy.core.engine] INFO: Spider opened
+2025-03-22 08:43:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-03-22 08:43:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2025-03-22 08:43:10 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.business-standard.com/>
+Traceback (most recent call last):
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\twisted\internet\defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\core\downloader\middleware.py", line 57, in process_request
+    method(request=request, spider=spider)
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\downloadermiddlewares\useragent.py", line 36, in process_request
+    request.headers.setdefault(b"User-Agent", self.user_agent)
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\utils\datatypes.py", line 84, in setdefault
+    return dict.setdefault(self, self.normkey(key), self.normvalue(def_val))  # type: ignore[arg-type]
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\http\headers.py", line 59, in normvalue
+    return [self._tobytes(x) for x in _value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\http\headers.py", line 59, in <listcomp>
+    return [self._tobytes(x) for x in _value]
+            ^^^^^^^^^^^^^^^^
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\http\headers.py", line 68, in _tobytes
+    raise TypeError(f"Unsupported value type: {type(x)}")
+TypeError: Unsupported value type: <class 'fake_useragent.fake.FakeUserAgent'>
+2025-03-22 08:43:10 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-03-22 08:43:10 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/builtins.TypeError': 1,
+ 'elapsed_time_seconds': 0.234731,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 3, 22, 3, 13, 10, 520060, tzinfo=datetime.timezone.utc),
+ 'items_per_minute': None,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'responses_per_minute': None,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 3, 22, 3, 13, 10, 285329, tzinfo=datetime.timezone.utc)}
+2025-03-22 08:43:10 [scrapy.core.engine] INFO: Spider closed (finished)
+2025-03-22 08:47:11 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: b1)
+2025-03-22 08:47:11 [scrapy.utils.log] INFO: Versions: lxml 5.3.1.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)], pyOpenSSL 25.0.0 (OpenSSL 3.4.1 11 Feb 2025), cryptography 44.0.1, Platform Windows-10-10.0.22631-SP0
+2025-03-22 08:47:12 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-03-22 08:47:12 [scrapy.extensions.telnet] INFO: Telnet Password: ee2e066f77424e77
+2025-03-22 08:47:12 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-03-22 08:47:12 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 1,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 0.5,
+ 'BOT_NAME': 'b1',
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 1,
+ 'CONCURRENT_REQUESTS_PER_IP': 1,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'LOG_FILE': 'business_scraper.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'b1.spiders',
+ 'SPIDER_MODULES': ['b1.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'}
+2025-03-22 08:47:12 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-03-22 08:47:12 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-03-22 08:47:12 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2025-03-22 08:47:12 [scrapy.core.engine] INFO: Spider opened
+2025-03-22 08:47:12 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-03-22 08:47:12 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2025-03-22 08:47:12 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.business-standard.com/>
+Traceback (most recent call last):
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\twisted\internet\defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\core\downloader\middleware.py", line 57, in process_request
+    method(request=request, spider=spider)
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\downloadermiddlewares\useragent.py", line 36, in process_request
+    request.headers.setdefault(b"User-Agent", self.user_agent)
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\utils\datatypes.py", line 84, in setdefault
+    return dict.setdefault(self, self.normkey(key), self.normvalue(def_val))  # type: ignore[arg-type]
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\http\headers.py", line 59, in normvalue
+    return [self._tobytes(x) for x in _value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\http\headers.py", line 59, in <listcomp>
+    return [self._tobytes(x) for x in _value]
+            ^^^^^^^^^^^^^^^^
+  File "C:\Users\prafu\OneDrive\Desktop\t1\my_scrapy_env\Lib\site-packages\scrapy\http\headers.py", line 68, in _tobytes
+    raise TypeError(f"Unsupported value type: {type(x)}")
+TypeError: Unsupported value type: <class 'fake_useragent.fake.FakeUserAgent'>
+2025-03-22 08:47:12 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-03-22 08:47:12 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/builtins.TypeError': 1,
+ 'elapsed_time_seconds': 0.235483,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 3, 22, 3, 17, 12, 848701, tzinfo=datetime.timezone.utc),
+ 'items_per_minute': None,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'responses_per_minute': None,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 3, 22, 3, 17, 12, 613218, tzinfo=datetime.timezone.utc)}
+2025-03-22 08:47:12 [scrapy.core.engine] INFO: Spider closed (finished)
+2025-03-22 08:47:44 [scrapy.utils.log] INFO: Scrapy 2.12.0 started (bot: b1)
+2025-03-22 08:47:44 [scrapy.utils.log] INFO: Versions: lxml 5.3.1.0, libxml2 2.11.7, cssselect 1.2.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)], pyOpenSSL 25.0.0 (OpenSSL 3.4.1 11 Feb 2025), cryptography 44.0.1, Platform Windows-10-10.0.22631-SP0
